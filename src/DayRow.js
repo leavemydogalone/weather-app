@@ -1,19 +1,26 @@
 import React from 'react';
+
+import DayRowBox from './DayRowBox';
+
 function DayRow(props) {
-  const { infoObj, system } = props;
-  function convert(input) {
-    // need to create a farneheight state in the container and do an if/then here
-    if (system === 'F') {
-      return Math.floor((input - 273) * (9 / 5) + 32);
-    } else {
-      return Math.floor(input - 273);
-    }
-  }
-  let displayNum = infoObj ? convert(infoObj.list[0].main.temp) : 'Loading';
+  const { system, daysArray } = props;
+
+  const boxItems = daysArray
+    ? daysArray[0].map((thing) => (
+        <DayRowBox key={thing.dt} system={system} item={thing} />
+      ))
+    : 'loading';
+
   return (
     <div className="dayRow">
-      {displayNum} {system}°
-      {/* {props.infoObj ? 'nothing' : props.infoObj.list[0].main.temp} */}
+      {daysArray ? (
+        <div>
+          {daysArray[0][0].dt_txt.substr(5, 5)}
+          {boxItems}
+        </div>
+      ) : (
+        'loading'
+      )}
     </div>
   );
 }

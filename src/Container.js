@@ -4,7 +4,8 @@ import DayRow from './DayRow';
 
 function Container(props) {
   const [temp, setTemp] = useState('F');
-  const { change, infoObj, weather } = props;
+  const { change, infoObj, weather, daysArray } = props;
+
   return (
     <div className="container">
       <Form change={change} changeTemp={setTemp} system={temp} />
@@ -14,7 +15,12 @@ function Container(props) {
           ? infoObj.city.name + ' ' + infoObj.city.country
           : 'Loading...'}
       </div>
-      <DayRow weather={weather} infoObj={infoObj} system={temp} />
+      <DayRow
+        weather={weather}
+        infoObj={infoObj}
+        system={temp}
+        daysArray={daysArray}
+      />
     </div>
   );
 }
