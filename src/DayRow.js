@@ -6,7 +6,7 @@ function DayRow(props) {
   const { system, daysArray } = props;
 
   const boxItems = daysArray
-    ? daysArray[0].map((thing) => (
+    ? daysArray.map((thing) => (
         <DayRowBox key={thing.dt} system={system} item={thing} />
       ))
     : 'loading';
@@ -15,7 +15,7 @@ function DayRow(props) {
     <div className="dayRow">
       {daysArray ? (
         <div>
-          {daysArray[0][0].dt_txt.substr(5, 5)}
+          {daysArray[0].dt_txt.substr(5, 5)}
           {boxItems}
         </div>
       ) : (

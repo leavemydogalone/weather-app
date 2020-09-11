@@ -8,8 +8,15 @@ function BackgroundImg(props) {
   //   setImageURL()
   // }
   return (
-    <div className="backgroundImg">
-      <img src={imageURL} alt="heres the background" />
+    <div
+      className="backgroundImg"
+      style={{ backgroundImage: 'url(' + imageURL + ')' }}
+    >
+      {/* <img
+        className="backgroundImg"
+        src={imageURL}
+        alt="heres the background"
+      /> */}
     </div>
   );
 }

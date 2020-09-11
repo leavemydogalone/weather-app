@@ -1,22 +1,40 @@
+body {
+  height: 90vh;
+  width: 90vw;
+}
+.App {
+  background: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  width: 60vw;
+  height: 60vh;
+}
 .container {
-  height: 400px;
-  width: 630px;
-  background: rgba(0, 0, 0, 0.4);
+  height: 50%;
+  width: 50%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  position: absolute;
+
+  overflow: auto;
 }
 
 .backgroundImg {
-  color: #999999;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
+  height: 100%;
+  width: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .dayRow {
-  display: inline-block;
   width: 100%;
   height: 20%;
-  background-color: grey;
+  background: rgba(0, 0, 0, 0.4);
+  background-color: lightblue;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -24,9 +42,11 @@
 
 .formBar {
   display: inline-block;
-  width: 100%;
-
+  width: 49%;
+  position: fixed;
   height: 30px;
+  margin-bottom: 20px;
+  background-color: #5813f0;
 }
 
 .dayRowBox {

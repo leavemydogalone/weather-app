@@ -36,8 +36,8 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <BackgroundImg />
+    <div className="App">
+      <BackgroundImg setWeatherType={setWeatherType} />
       <Container
         setDaysArray={setDaysArray}
         daysArray={daysArray}
