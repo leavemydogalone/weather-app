@@ -11,7 +11,7 @@ function App() {
 
   function changeResult(input) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=8fa54f0ed9bc540b7c6de23a1a931209`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => {
         if (response.status >= 200 && response.status <= 299) {

@@ -22,7 +22,10 @@ function Container(props) {
       <br />
       <div style={{ backgroundColor: 'red', marginTop: '12px' }}>
         {infoObj
-          ? infoObj.city.name + ' ' + infoObj.city.country
+          ? infoObj.city.name +
+            ' ' +
+            infoObj.city.country +
+            ' - Five-Day Forecast'
           : 'Loading...'}
       </div>
       {rows}

@@ -15,7 +15,16 @@ function DayRow(props) {
     <div className="dayRow">
       {daysArray ? (
         <div>
-          {daysArray[0].dt_txt.substr(5, 5)}
+          <div
+            style={{
+              fontSize: '20px',
+              display: 'inline-block',
+              backgroundColor: 'white',
+              marginBottom: '15px',
+            }}
+          >
+            {daysArray[0].dt_txt.substr(5, 5)}
+          </div>
           {boxItems}
         </div>
       ) : (
